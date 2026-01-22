@@ -87,7 +87,7 @@ var swiper = new Swiper(".teachers-slider", {
             },
       },
 });
-var swiper = new Swiper(".reviwes-slider", {
+var swiper = new Swiper(".reviews-slider", {
       spaceBetween: 20,
       grabCursor: true,
       loop: true,
