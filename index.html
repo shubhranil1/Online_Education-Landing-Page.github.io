@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Online Education</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+      <link rel="stylesheet" href="./External/style.css" />
+      <link rel="web icon" type="png" href="./External/Images/icon.png" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+      <header class="header">
+            <section class="flex">
+                  <a href="#" class="logo">
+                        <img src="./External/Images/logo.jpg" alt="" id="logo" /><span>OlEduca.</span>
+                  </a>
+                  <nav class="navbar">
+                        <a href="#home">home</a>
+                        <a href="#about">about</a>
+                        <a href="#courses">courses</a>
+                        <a href="#teachers">teachers</a>
+                        <a href="#reviews">reviews</a>
+                        <a href="#contact">contact us!</a>
+                  </nav>
+                  <div class="login">
+                        <button class="btn fas fa-user" id="login"></button>
+                  </div>
+                  <div id="menu-btn" class="fas fa-bars"></div>
+            </section>
+            <form onsubmit="return func()" action="javascript:void(0);" method="post" class="loginform">
+                  <h3>Login</h3>
+                  <input type="email" id="emailId" placeholder="Enter your valid email" required/>
+                  <input type="password" id="passwordId" placeholder="Enter your valid password" required/>
+                  <span><button type="submit" class="btn">Login</button></span>
+            </form>              
+      </header>
+      <section class="home" id="home">
+            <div class="row">
+                  <div class="content">
+                        <h1>
+                              <span>Welcome to</span><span> OlEduca</span>
+                        </h1>
+                        <p>
+                              Online learning provides accessible education, fostering flexibility, convenience, and diverse resources, revolutionizing traditional learning methods for global learners.
+                        </p>
+                        <a href="#contact" class="btn">contact us!</a>
+                  </div>
+                  <div class="image">
+                        <img src="./External/Images/home_img.jpg" alt="Home_Image">
+                  </div>
+            </div>
+      </section>
+      <section class="count">
+            <div class="box-container">
+                  <div class="box">
+                        <i class="fas fa-graduation-cap"></i>
+                        <div class="content">
+                              <h2>150+</h2>
+                              <p>courses</p>
+                        </div>
+                  </div>
+                  <div class="box">
+                        <i class="fas fa-user-graduate"></i>
+                        <div class="content">
+                              <h2>1300+</h2>
+                              <p>students</p>
+                        </div>
+                  </div>
+                  <div class="box">
+                        <i class="fas fa-chalkboard-user"></i>
+                        <div class="content">
+                              <h2>100+</h2>
+                              <p>teachers</p>
+                        </div>
+                  </div>
+                  <div class="box">
+                        <i class="fas fa-face-smile"></i>
+                        <div class="content">
+                              <h2>80+</h2>
+                              <p>staisfaction</p>
+                        </div>
+                  </div>
+            </div>
+      </section>
+      <section class="about" id="about">
+            <div class="row">
+                  <div class="image">
+                        <img src="./External/Images/about.png" alt="About_Image">
+                  </div>
+                  <div class="content">
+                        <h3>
+                              why choose us?
+                        </h3>
+                        <p>
+                              Choose us for online learning: Expert instructors, interactive content, flexibility, and a supportive community ensure your success and satisfaction.
+                        </p>
+                        <a href="#contact" class="btn">contact us!</a>
+                  </div>
+            </div>
+      </section>
+      <section class="courses" id="courses">
+            <h1 class="heading">our <span>courses</span></h1>
+            <div class="swiper course-slider">
+                  <div class="swiper-wrapper">
+                        <div class="swiper-slide slide">
+                              <img src="./External/Images/course1.png">
+                              <h3>web development</h3>
+                              <p>Master web development with courses, covering HTML, CSS, JavaScript, and modern frameworks. Start coding now!</p>
+                        </div>
+                        <div class="swiper-slide slide">
+                              <img src="./External/Images/course2.png">
+                              <h3>android development</h3>
+                              <p>Master Android app creation with hands-on projects in this comprehensive and practical development course.</p>
+                        </div>
+                        <div class="swiper-slide slide">
+                              <img src="./External/Images/course3.png">
+                              <h3>digital marketing</h3>
+                              <p>Master digital marketing strategies with our comprehensive course for effective online presence and business growth.</p>
+                        </div>
+                        <div class="swiper-slide slide">
+                              <img src="./External/Images/course7.jpg">
+                              <h3>artificial intelligence</h3>
+                              <p>Explore AI fundamentals, machine learning, and neural networks in this comprehensive introductory artificial intelligence course.</p>
+                        </div>
+                        <div class="swiper-slide slide">
+                              <img src="./External/Images/course4.png">
+                              <h3>science and biology</h3>
+                              <p>Explore life's intricacies, from cells to ecosystems, unraveling the mysteries of biology in this course.</p>
+                        </div>
+                        <div class="swiper-slide slide">
+                              <img src="./External/Images/course5.png">
+                              <h3>graphics design</h3>
+                              <p>Explore creative realms in Graphics Design course: unleash digital artistry, master tools, ignite visual storytelling.</p>
+                        </div>
+                        <div class="swiper-slide slide">
+                              <img src="./External/Images/course6.png">
+                              <h3>enigineering</h3>
+                              <p>Dynamic engineering course explores innovative design, problem-solving, and advanced technologies.</p>
+                        </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+            </div>
+      </section>
+      <section class="teachers" id="teachers">
+            <h1 class="heading">Expert <span>Teachers</span></h1>
+            <div class="swiper teachers-slider">
+                  <div class="swiper-wrapper">
+                        <div class="swiper-slide slide">
+                              <img src="./External/Images/tutor1.jpg"/>
+                              <div class="share">
+                                    <a href="https://www.facebook.com/coderSamrat/" style="text-decoration: none;" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="https://www.instagram.com/codersamrat/" style="text-decoration: none;" target="_blank"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/in/samrat-mallick-a3bba6276/"  style="text-decoration: none;" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                    <a href="https://github.com/coderSamrat" style="text-decoration: none;" target="_blank"><i class="fab fa-github"></i></a>
+                              </div>
+                              <h3>Samrat Mallick</h3>
+                        </div>
+                        <div class="swiper-slide slide">
+                              <img src="./External/Images/tutor2.png"/>
+                              <div class="share">
+                                    <a href="https://www.facebook.com/profile.php?id=100012852317639&ref=xav_ig_profile_web" style="text-decoration: none;" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="https://www.instagram.com/ansh936raj/" style="text-decoration: none;" target="_blank"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/in/ansh-raj-bb7195286/"  style="text-decoration: none;" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                    <a href="https://github.com/coderSamrat" style="text-decoration: none;" target="_blank"><i class="fab fa-github"></i></a>
+                              </div>
+                              <h3>Ansh Raj</h3>
+                        </div>
+                        <div class="swiper-slide slide">
+                              <img src="./External/Images/tutor3.jpg"/>
+                              <div class="share">
+                                    <a href="https://www.facebook.com/debdipya.patra?mibextid=ZbWKwL" style="text-decoration: none;" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="https://www.instagram.com/debdipya_patra?igsh=OXR4N3JudnM1c3l3" style="text-decoration: none;" target="_blank"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/in/debdipya-patra-47a352260?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"  style="text-decoration: none;" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                    <a href="https://github.com/debdipya2004" style="text-decoration: none;" target="_blank"><i class="fab fa-github"></i></a>
+                              </div>
+                              <h3>Debdipya Patra</h3>
+                        </div>
+                        <div class="swiper-slide slide">
+                              <img src="./External/Images/student.jpg"/>
+                              <div class="share">
+                                    <a href="https://www.facebook.com/coderSamrat/" style="text-decoration: none;" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="https://www.instagram.com/codersamrat/" style="text-decoration: none;" target="_blank"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/in/samrat-mallick-a3bba6276/"  style="text-decoration: none;" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                    <a href="https://github.com/coderSamrat" style="text-decoration: none;" target="_blank"><i class="fab fa-github"></i></a>
+                              </div>
+                              <h3>Samrat Mallick</h3>
+                        </div>
+                        <div class="swiper-slide slide">
+                              <img src="./External/Images/tutor1.jpg"/>
+                              <div class="share">
+                                    <a href="https://www.facebook.com/coderSamrat/" style="text-decoration: none;" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="https://www.instagram.com/codersamrat/" style="text-decoration: none;" target="_blank"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/in/samrat-mallick-a3bba6276/"  style="text-decoration: none;" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                    <a href="https://github.com/coderSamrat" style="text-decoration: none;" target="_blank"><i class="fab fa-github"></i></a>
+                              </div>
+                              <h3>Samrat Mallick</h3>
+                        </div>
+                        <div class="swiper-slide slide">
+                              <img src="./External/Images/tutor2.png"/>
+                              <div class="share">
+                                    <a href="https://www.facebook.com/coderSamrat/" style="text-decoration: none;" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="https://www.instagram.com/codersamrat/" style="text-decoration: none;" target="_blank"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/in/samrat-mallick-a3bba6276/"  style="text-decoration: none;" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                    <a href="https://github.com/coderSamrat" style="text-decoration: none;" target="_blank"><i class="fab fa-github"></i></a>
+                              </div>
+                              <h3>Samrat Mallick</h3>
+                        </div>
+                        <div class="swiper-slide slide">
+                              <img src="./External/Images/tutor3.jpg"/>
+                              <div class="share">
+                                    <a href="https://www.facebook.com/coderSamrat/" style="text-decoration: none;" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="https://www.instagram.com/codersamrat/" style="text-decoration: none;" target="_blank"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/in/samrat-mallick-a3bba6276/"  style="text-decoration: none;" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                    <a href="https://github.com/coderSamrat" style="text-decoration: none;" target="_blank"><i class="fab fa-github"></i></a>
+                              </div>
+                              <h3>Samrat Mallick</h3>
+                        </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+            </div>
+      </section>
+      <section class="reviews" id="reviews">
+            <h1 class="heading">student's <span>reviews</span></h1>
+            <div class="swiper reviwes-slider">
+                  <div class="swiper-wrapper">
+                        <div class="swiper-slide slide">
+                              <p>
+                                    This is the best course out there to learn recursion and backtracking concepts intuitively from scratch, Bhaiya is a wonderfully teacher and teaches from the basics, explaining every problem in detail including Leetcode Hard problems, highly recommend.
+                              </p>
+                              <div class="user">
+                                    <img src="./External/Images/student.jpg" alt="">
+                                    <div class="user-info">
+                                          <h3>Samrat Mallick</h3>
+                                          <div class="stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star-half-alt"></i>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="swiper-slide slide">
+                              <p>
+                                    This is the best course out there to learn recursion and backtracking concepts intuitively from scratch, Bhaiya is a wonderfully teacher and teaches from the basics, explaining every problem in detail including Leetcode Hard problems, highly recommend.
+                              </p>
+                              <div class="user">
+                                    <img src="./External/Images/student2.jpeg" alt="">
+                                    <div class="user-info">
+                                          <h3>Ansh Raj</h3>
+                                          <div class="stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star-half-alt"></i>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="swiper-slide slide">
+                              <p>
+                                    This is the best course out there to learn recursion and backtracking concepts intuitively from scratch, Bhaiya is a wonderfully teacher and teaches from the basics, explaining every problem in detail including Leetcode Hard problems, highly recommend.
+                              </p>
+                              <div class="user">
+                                    <img src="./External/Images/tutor3.jpg" alt="">
+                                    <div class="user-info">
+                                          <h3>Debdipya Patra</h3>
+                                          <div class="stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="swiper-slide slide">
+                              <p>
+                                    This is the best course out there to learn recursion and backtracking concepts intuitively from scratch, Bhaiya is a wonderfully teacher and teaches from the basics, explaining every problem in detail including Leetcode Hard problems, highly recommend.
+                              </p>
+                              <div class="swiper-slide user">
+                                    <img src="./External/Images/student.jpg" alt="">
+                                    <div class="user-info">
+                                          <h3>Samrat Mallick</h3>
+                                          <div class="stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star-half-alt"></i>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="swiper-slide slide">
+                              <p>
+                                    This is the best course out there to learn recursion and backtracking concepts intuitively from scratch, Bhaiya is a wonderfully teacher and teaches from the basics, explaining every problem in detail including Leetcode Hard problems, highly recommend.
+                              </p>
+                              <div class="swiper-slide user">
+                                    <img src="./External/Images/tutor1.jpg" alt="">
+                                    <div class="user-info">
+                                          <h3>Samrat Mallick</h3>
+                                          <div class="stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="swiper-slide slide">
+                              <p>
+                                    This is the best course out there to learn recursion and backtracking concepts intuitively from scratch, Bhaiya is a wonderfully teacher and teaches from the basics, explaining every problem in detail including Leetcode Hard problems, highly recommend.
+                              </p>
+                              <div class="user">
+                                    <img src="./External/Images/tutor2.png" alt="">
+                                    <div class="user-info">
+                                          <h3>Ansh Raj</h3>
+                                          <div class="stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="swiper-slide slide">
+                              <p>
+                                    This is the best course out there to learn recursion and backtracking concepts intuitively from scratch, Bhaiya is a wonderfully teacher and teaches from the basics, explaining every problem in detail including Leetcode Hard problems, highly recommend.
+                              </p>
+                              <div class="user">
+                                    <img src="./External/Images/tutor3.jpg" alt="">
+                                    <div class="user-info">
+                                          <h3>Samrat Mallick</h3>
+                                          <div class="stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star-half-alt"></i>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+            </div>
+      </section>
+      <section class="contact" id="contact">
+            <h1 class="heading"><span>contact</span> us!</h1>
+            <div class="row">
+                  <div class="image">
+                        <img src="./External/Images/contact.png" alt="Contact Image">
+                  </div>
+                  <form action="#" method="post" class="formbox">
+                        <span>Your name</span>
+                        <input type="text" class="box" placeholder="Enter your name" maxlength="50" name="name" required/>
+                        <span>Your vailid email address</span>
+                        <input type="email" class="box" placeholder="Enter your vailid email address" maxlength="50" name="email" required/>
+                        <span>Your vailid mobile number</span>
+                        <input type="number" class="box" placeholder="Enter your vailid mobile number" max="9999999999" min="0" name="number" required onkeypress="if(this.value.length == 10) return false;"/>
+                        <span>Select your cousre</span>
+                        <select name="course" class="box" required>
+                              <option value="" disabled selected>---Seclect the course ---</option>
+                              <option value="web development">web development</option>
+                              <option value="app development">app development</option>
+                              <option value="digital marketing">digital marketing</option>
+                              <option value="graphics design">graphics design</option>
+                              <option value="enigineering">enigineering</option>
+                              <option value="science and biology">science and biology</option>
+                              <option value="science and biology">science and biology</option>
+                              <option value="data analysis">data analysis</option>
+                              <option value="social study">social study</option>
+                              <option value="artificial intelligence">artificial intelligence</option>
+                        </select>
+                        <span>Select your gender</span>
+                        <div class="radio">
+                              <input type="radio" name="gender" value="male" id="male" required/>
+                              <label for="male">Male</label>
+                              <input type="radio" name="gender" value="female" id="female" required/>
+                              <label for="female">Female</label>
+                        </div>
+                        <button type="submit" class="btn">Sand me message <i class="fas fa-arrow-right"></i>
+                        </button>
+                  </form>
+            </div>
+      </section>
+      <footer class="footer">
+            <section class="foot">
+                  <div class="share">
+                        <a href="https://www.linkedin.com/in/shubhranil-chowdhury"  style="text-decoration: none;" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/shubhranil1" style="text-decoration: none;" target="_blank"><i class="fab fa-github"></i></a>
+                  </div>
+                  <div class="cradit" style="text-transform: none;">
+                        <p>&copy; 2026 | Designed by Shubhranil Chowdhury | All Rights Reserved</p>
+                        <a href="#"><i class="fas fa-arrow-up"></i></a>
+                  </div>
+            </section>
+      </footer>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      <script src="./External/script.js"></script>
+</body>
+</html>

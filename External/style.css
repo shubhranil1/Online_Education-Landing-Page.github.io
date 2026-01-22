@@ -1,0 +1,765 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Roboto+Slab:wght@400;500;600&display=swap');
+*{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      list-style: none;
+      border: none;
+      outline: none;
+      font-family:'Roboto Slab' , serif;
+      text-transform: capitalize;
+      transition: 0.5s linear;
+}
+:root{
+      --green: #00e77f;
+      --white: #e6e6e6;
+      --light-white: #98a092;
+      --black: #3d3d3d;
+      --light-bg: #4b4b4b;
+}
+html{
+      font-size: 62.5%;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      scroll-padding-top: 8rem;
+}
+*::selection{
+      background: var(--green);
+      color: var(--white);
+}
+::-webkit-scrollbar{
+      width: 0.5rem;
+      height: 1rem;
+}
+::-webkit-scrollbar-track{
+      background: transparent;
+}
+::-webkit-scrollbar-thumb{
+      background: var(--green);
+      border-radius: 5rem;
+}
+body{
+      background: var(--black);
+}
+section{
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 0.1rem;
+}
+.header{
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: var(--light-bg);
+      width: 100%;
+}
+.header .flex{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+}
+#logo{
+      width: 100px;
+      height: 50px;
+      border: 2px solid var(--green);
+      border-radius: 0.6rem;
+}
+.header .flex .logo{
+      font-size: 5rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      color: var(--white);
+}
+.navbar{
+      cursor: pointer;
+}
+.navbar a{
+      margin-left: 2rem;
+      font-size: 2rem;
+      color: var(--white);
+      transition: 0.5s ease;
+      font-weight: 600;
+      font-family:'Roboto Slab' , serif;
+}
+.navbar a:hover,
+.navbar a.active{
+      color: var(--green);
+}
+.login .btn{
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem 1.5rem;
+      border-radius: 0.7rem;
+      overflow: hidden;
+      z-index: 1;
+      background: var(--black);
+      border: 2px solid var(--black);
+      color: #00e77f;
+      cursor: pointer;
+}
+.login .btn:active{
+      transform: scale(0.98) translateY(-3px);
+}
+.login .btn i{
+      font-size: 2.5rem;
+}
+#menu-btn{
+      color: var(--green);
+      font-size: 2.5rem;
+      cursor: pointer;
+      display: none;
+}
+.navbar .btn{
+      color: var(--black);
+      background-color: var(--green);
+      padding: 1rem 4rem;
+      font-size: 1.7rem;
+      font-weight: 500;
+      border: 1px solid var(--green);
+      border-radius: 0.6rem;
+      transition: 0.5s ease;
+      position: relative;
+}
+.navbar .btn:hover{
+      background: rgb(0, 156, 91);
+      color: var(--white);
+}
+.navbar .btn:active{
+      background: rgb(1, 103, 60);
+}
+.header .loginform{
+      position: absolute;
+      top: 115%;
+      right: -105%;
+      background: var(--black);
+      border-radius: 0.5rem;
+      box-shadow: 0 0 1rem rgba(249, 247, 247, 0.1);
+      width: 35rem;
+      padding: 2rem;
+}
+.header .loginform.active{
+      right: 2rem;
+      transition: 0.5s ease;
+}
+.header .loginform h3{
+      margin-bottom: 1.5rem;
+      text-align: center;
+      font-size: 3rem;
+      font-weight: 600;
+      color: var(--green);
+      letter-spacing: 2px;
+}
+.header .loginform input{
+      margin-bottom: 1.5rem;
+      outline: none;
+      border: none;
+      width: 100%;
+      padding: 1rem 1.5rem;
+      border-radius: 1.5rem;
+      background: var(--light-bg);
+      color: var(--white);
+      text-transform: none;
+}
+.header .loginform span{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+.header .loginform .btn{
+      margin-top: 1.5rem;
+      cursor: pointer;
+      padding: 1rem 5rem;
+      border-radius: 3rem;
+      font-size: 1.5rem;
+      font-weight: 600;
+      border: 2px solid var(--light-white);
+      background: var(--light-white);
+      color: var(--black);
+      transition: 0.5s ease;
+      letter-spacing: 2px;
+}
+.header .loginform .btn:hover{
+      background: var(--light-bg);
+      color: var(--white);
+}
+.header .loginform .btn:active{
+      background: rgb(48, 47, 47);
+      transition: 0.5s ease;
+}
+.home,.about,.count,.courses{
+      padding: 2rem;
+}
+.row{
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+}
+.row .content{
+      flex: 1 1 40rem;
+      text-align: center;
+}
+.home .row .content h1{
+      font-size: 4.5rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+      margin-bottom: 1rem;
+}
+.home .row .content h1 span:first-child{
+      color: var(--white);
+}
+.home .row .content h1 span:last-child{
+      color: var(--green);
+}
+.row .image{
+      flex: 1 1 40rem;
+}
+.row .image img{
+      margin-top: 5rem;
+      width: 100%;
+      border-radius: 0.6rem;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.771);
+}
+.row .content p{
+      color: var(--light-white);
+      font-size: 1.3rem;
+      margin-bottom: 5rem;
+      line-height: 1.4;
+}
+.row .content .btn{
+      color: var(--black);
+      background-color: var(--green);
+      padding: 1rem 4rem;
+      font-size: 1.7rem;
+      font-weight: 500;
+      border: 1px solid var(--green);
+      border-radius: 0.6rem;
+      transition: 0.5s ease;
+}
+.row .content .btn:hover{
+      background: rgb(0, 156, 91);
+      color: var(--white);
+}
+.row .content .btn:active{
+      background: rgb(1, 103, 60);
+}
+.home .row .image{
+      margin-top: 5rem;
+}
+.count .box-container{
+      display: grid;
+      grid-template-columns: repeat(auto-fit , minmax(27rem , 1fr));
+      align-items: flex-start;
+      grid-gap: 2.5rem;
+}
+.count .box-container .box{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2.5rem;
+      background: var(--light-bg);
+      border-radius: 0.6rem;
+      padding: 2rem;
+}
+.count .box-container .box i{
+      font-size: 5rem;
+      color: var(--green);
+}
+.count .box-container .box .content h2{
+     color: var(--light-white);
+     font-size: 2rem;
+}
+.count .box-container .box .content p{
+     font-size: 1.5rem;
+     color: var(--white);
+}
+.about .content h3{
+     font-size: 3rem;
+     font-weight: 800;
+     color: var(--green); 
+     margin-bottom: 1rem;
+}
+.heading{
+      margin-bottom: 2.5rem;
+      text-align: center;
+      color: var(--white);
+      font-size: 4rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+}
+.heading span{
+      color: var(--green);
+      text-transform: uppercase;
+}
+.courses .slide{
+      background: var(--light-bg);
+      border-radius: 0.6rem;
+      text-align: center;
+      margin-bottom: 4rem;
+      padding: 2rem;
+      user-select: none;
+}
+.courses .slide img{
+      width: 100%;
+      height: 25rem;
+      object-fit: cover;
+      border-radius: 0.6rem;
+}
+.courses .slide h3{
+      font-size: 2rem;
+      margin: 1.5rem 0;
+      color: var(--white);
+}
+.courses .slide p{
+      line-height: 1.6;
+      font-size: 1.5rem;
+      color: var(--light-white);
+}
+.swiper-pagination-bullet{
+      background-color: var(--white) !important;
+} 
+.swiper-pagination-bullet-active{
+      background-color: var(--green) !important;
+}
+.teachers{
+      padding: 2rem;
+}
+.teachers .slide{
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 4rem;
+      user-select: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+}
+.teachers .slide img{
+      height: 25rem;
+      width: 25rem;
+      object-fit: cover;
+      border-radius: 0.6rem;
+      border-radius: 50%;
+}
+.teachers .slide h3{
+      font-size: 2rem;
+      margin-top: 1.5rem;
+      text-align: center;
+      color: var(--white);
+}
+.teachers .slide .share{
+      position: absolute;
+      top: 60%;
+      left: -30rem;
+      transition: 0.5s ease;
+}
+.teachers .slide:hover .share{
+      left: 24%;
+}
+.teachers .slide .share a{
+      display: inline-flex;
+      margin-bottom: 3rem;
+      align-items: center;
+      justify-content: center;
+      background: var(--light-bg);
+      border-radius: 0.5rem;
+      height: 3.4rem;
+      width: 3.4em;
+      color: var(--white);
+      position: relative;
+      transition: 0.5s ease;
+      margin-left: 1rem;
+}
+.teachers .slide .share a:hover{
+      background: var(--green);
+      color: var(--white);
+}
+.teachers .slide .share a i{
+      position: absolute;
+      font-size: 2rem;
+      text-align: center;
+}
+.reviews{
+      padding: 2rem;
+}
+.reviwes-slider .slide{
+      background: var(--light-bg);
+      border-radius: 0.7rem;
+      padding: 2rem;
+      margin-bottom: 4rem;
+      user-select: none;
+}
+.reviwes-slider .slide p{
+      line-height: 1.6;
+      font-size: 1.5rem;
+      color: var(--light-white);
+}
+.reviwes-slider .slide .user{
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
+}
+.reviwes-slider .slide .user img{
+      width: 7rem;
+      height: 7rem;
+      object-fit: cover;
+      border-radius: 50%;
+}
+.reviwes-slider .slide .user .user-info h3{
+      font-size: 1.8rem;
+      color: rgb(0, 213, 255);
+      margin-bottom: 1rem;
+}
+.reviwes-slider .slide .user .user-info .stars i{
+      font-size: 1.5rem;
+      color: var(--green);
+}
+.contact{
+      padding: 2rem;
+      
+}
+.contact .row{
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+}
+.contact .row .image{
+      flex: 1 1 40rem;
+}
+.contact .row .image img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+}
+.contact .row .formbox{
+      flex: 1 1 40rem;
+      background: #16171d82;
+      padding: 2rem;
+      border-radius: 0.8rem;
+}
+.contact .row .formbox .box{
+      width: 100%;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+      border-radius: 0.6rem;
+      background: var(--light-bg);
+      padding: 1.4rem;
+      color: var(--white);
+      font-size: 1.5rem;
+      text-transform: none;
+}
+.contact .row .formbox span{
+      font-size: 1.6rem;
+      color: var(--light-white);
+      text-transform: none;
+}
+.contact .row .formbox .radio{
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+}
+.contact .row .formbox .radio input{
+      appearance: none;
+      width: 2rem;
+      height: 2rem;
+      background: var(--light-white);
+      cursor: pointer;
+      transition: all 0.5s ease;
+}
+.contact .row .formbox .radio label{
+      color: var(--white);
+      font-size: 1.3rem;
+      margin-left: 0.5rem;
+      cursor: pointer;
+      transition: all 0.5s ease;
+}
+.contact .row .formbox .radio #female{
+      margin-left: 2rem;
+}
+.contact .row .formbox .radio input:checked{
+      background: var(--green);
+      border-radius: 50%;
+}
+.contact .row .formbox .radio #male:checked ~ label[for="male"]{
+      color: var(--green);
+}
+.contact .row .formbox .radio #female:checked ~ label[for="female"]{
+      color: var(--green);
+}
+.contact .row .formbox .btn{
+      color: var(--black);
+      background-color: var(--green);
+      padding: 1rem 4rem;
+      font-size: 1.7rem;
+      font-weight: 500;
+      border: 1px solid var(--green);
+      border-radius: 2rem;
+      transition: 0.5s ease;
+      cursor: pointer;
+      text-transform: none;
+      position: relative;
+}
+.contact .row .formbox .btn:hover{
+      background: rgb(0, 156, 91);
+      color: var(--white);
+}
+.contact .row .formbox .btn:active{
+      background: rgb(1, 103, 60);
+}
+.contact .row .formbox .btn i{
+      font-size: 2rem;
+      position: absolute;
+      right: 13px;
+      top: 13px;
+} 
+.contact .formbox input[type="number"]::-webkit-outer-spin-button,
+.contact .formbox input[type="number"]::-webkit-inner-spin-button{
+      -webkit-appearance: none;
+      margin: 0;
+}
+.contact .formbox select{
+      -webkit-appearance: none;
+      cursor: pointer;
+}
+.contact .formbox select option{
+      color: #cfcfcf;
+      background: #16171d82;
+}
+.footer{
+      background: var(--light-bg);
+}
+.footer .foot .share{
+      text-align: center;
+      padding: 2rem;
+}
+.footer .foot .share a{
+      display: inline-flex;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--black);
+      border: 0.3rem solid var(--black);
+      align-items: center;
+      justify-content: center;
+      margin-left: 2rem;
+      color: var(--white);
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      transition: 0.5s ease;
+}
+.footer .foot .share a::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background: var(--white);
+      z-index: -1;
+      transition: 0.5s ease;
+}
+.footer .foot .share a:hover::before{
+      width: 100%;
+}
+.footer .foot .share a i{
+      font-size: 2.5rem;
+      transition: 0.5s ease;
+}
+.footer .foot .share a:hover i{
+      color: var(--black);
+}
+.footer .foot .cradit{
+      display: flex;
+      padding: 2rem 2rem 0rem;
+      justify-content: space-between;
+      max-width: 90vw;
+      border-top: 2px solid #d0d1d882;
+      margin: 0 auto;
+      align-items: center;
+}
+.footer .foot .cradit p,
+.footer .foot .cradit a{
+      margin: 2rem 1.5rem 0;
+}
+.footer .foot .cradit p{
+      font-size: 1.5rem;
+      color: var(--white);
+}
+.footer .foot .cradit a{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--black);
+      border: 2px solid var(--black);
+      padding: 1.5rem;
+      border-radius: 0.3rem;
+      position: relative;
+      z-index: 1;
+      overflow: hidden;  
+      transition: 0.5s ease;
+}
+.footer .foot .cradit a::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background: rgb(0, 156, 91);
+      border-radius: 0.3rem;
+      z-index: -1;
+      transition: 0.5s ease;
+}
+.footer .foot .cradit a:hover::before{
+      width: 100%;
+}
+.footer .foot .cradit a i{
+      font-size: 2rem;
+      color: rgb(0, 156, 91);
+      transition: 0.5s ease;
+}
+.footer .foot .cradit a:hover i{
+      color: var(--black);
+}
+@media(max-width:1140px){
+      .header section{
+            padding: 1rem;
+            font-size: 60%;
+      }
+      .header .flex .logo{
+            font-size: 3rem;
+      }
+}
+@media (max-width:1024px){
+      html{
+            font-size: 55%;
+      }
+      .header section{
+            padding: 1rem;
+            font-size: 60%;
+      }
+      .header .flex .navbar{
+            font-size: 25px;
+      }
+      .logo span{
+            font-size: 3rem;
+      }
+      .flex{
+            gap: 10px;
+      }
+      .home{
+            padding: 50px;
+            margin-top: 3rem;
+      }
+      .about .row{
+            flex-direction: column-reverse;
+      }
+      .about .row .content{
+            flex: 1 1 20rem;
+      }
+      .about .row .image{
+            flex: 1 1 20rem;
+      }
+      .contact .row .formbox .btn i{
+            right: 10px;
+            top: 10px;
+      } 
+      .footer .foot .share{
+            width: 100%;
+      }
+      .footer .foot .share a{
+            width: 40px;
+            height: 40px;
+      }
+      .teachers .slide:hover .share{
+            left: 23%;
+      }
+}
+@media (max-width:768px){
+      #menu-btn{
+            display: inline-block;
+      }
+      #menu-btn.fa-bars{
+            transform: rotate(180deg);
+      }
+      .logo span{
+            font-size: 2.8rem;
+      }
+      .logo #logo{
+            width: 80px;
+            height: 40px;
+      }
+      .header .flex .navbar{
+            position: absolute;
+            width: 100vw;
+            top: 99%;
+            left: 0;
+            right: 0;
+            padding: 10px 20px;
+            background: var(--light-bg);
+            border-top: 2px solid var(--green);
+            border-bottom: 2px solid var(--green);
+            text-align: center;
+            clip-path: polygon( 0 0 , 100% 0 , 100% 0 , 0 0) ;
+      }
+      .header .flex .navbar.active{
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      }
+      .header .flex .navbar a{
+            display: block;
+            margin: 10px;
+      }
+      .login {
+            position: absolute;
+            right: 40px;
+      }
+      .header .loginform.active{
+            top: 200%;
+      }
+      .home .row .content{
+            margin-bottom: 2rem;
+      }
+      .teachers .slide:hover .share{
+            left: 26%;
+      }
+}
+@media (max-width:450px){
+      html{
+            font-size: 50%;
+      }
+      .logo span{
+            font-size: 3rem;
+      }
+      .logo #logo{
+            width: 80px;
+            height: 40px;
+      }
+      .home-text .btn{
+            right: 33%;
+      }
+      .home .row .content h1{
+            font-size: 4.875rem;
+      }
+      .about .row .content h3{
+            font-size: 4rem;
+      }
+      .heading{
+            font-size: 3rem;
+      }
+      .teachers .slide:hover .share{
+            left: 26%;
+      }
+      .login .btn {
+           padding: 1.2rem 1.2rem;
+      }
+}
